@@ -1,0 +1,178 @@
+body {
+  margin: 10px 0px;
+  height: 100%;
+  overflow-y: hidden;
+  min-height: 100vh;
+  background-color: black;
+  font-family: 'Outfit', sans-serif;
+}
+.user-pic-image {
+  /* max-height: 48px; */
+  /* border-radius: 50%; */
+}
+.user-pic-container {
+  /* background-color: red; */
+  /* margin: 12px; */
+  height: 48px;
+  background: #d4d4d4;
+  width: 48px;
+  /* align-self: baseline; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  align-self: flex-end;
+}
+
+.chats-container {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-grow: 6;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border: 1px solid black;
+  /* margin: 10px; */
+  margin-bottom: 10px;
+  max-height: 50vh;
+}
+.message-app-container {
+  display: flex;
+  flex-direction: column;
+  /* max-height: 100vh; */
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  /* height: 100vh; */
+  /* min-height: inherit; */
+  /* justify-content: flex-end; */
+  max-width: 700px;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+}
+  
+.chat {
+  display: flex;
+  align-items: flex-start;
+  /* width: 60%; */
+  margin: 10px 0px;
+  column-gap: 12px;
+  
+  /* height: 48px; */
+}
+.chat-text-container {
+  max-width: 60%;
+  border-radius: 8px;
+  padding: 8px;
+  /* align-self: center; */
+  white-space: pre-line;
+  overflow-wrap: break-word;
+}
+.chat-sent-container .chat-text-container {
+  background-color: #7dd3fc;
+  /* margin: 0px 12px 0px 0px; */
+}
+.chat-recieve-container .chat-text-container {
+  background-color: #d7d7d7;
+  /* margin: 0px 0px 0px 12px; */
+}
+
+.chat-sent-container {
+  flex-direction: row-reverse;
+  column-gap: 12px;
+}
+.debug-css {
+  /* border: 2px solid salmon; */
+}
+.new-chat-form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.next-chat-input {
+  /* flex-grow: 1; */
+  /* margin: 0px 12px; */
+  resize: none;
+  width: 100%;
+}
+
+.enter-new-chat-button {
+  background:none ;
+  border: none;
+  width: 60px;
+}
+
+.new-chat-form-container {
+  /* flex-grow: 1; */
+}
+
+main{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chats-container {}
+
+/* width */
+.chats-container::-webkit-scrollbar {
+  width: 6px;
+  height: 50px;
+}
+
+/* Track */
+.chats-container::-webkit-scrollbar-track {
+  background: #f4f7f900;
+}
+
+/* Handle */
+.chats-container::-webkit-scrollbar-thumb {
+  background: #9E9E9E;
+  border-radius: 20px;
+}
+.chat-input-container {
+  flex-grow: 1;
+} 
+
+
+
+.tooltip {
+  position: relative;
+  display: flex;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: fit-content;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  
+}
+
+.tooltip .tooltiptext.tooltip-left{
+  top: -5px;
+  right: 105%;  
+}
+.tooltip .tooltiptext.tooltip-right {
+  top: -5px;
+  left: 105%;  
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
